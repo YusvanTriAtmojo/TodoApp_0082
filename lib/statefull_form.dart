@@ -8,6 +8,9 @@ class StatefullForm extends StatefulWidget {
 }
 
 class _StatefullFormState extends State<StatefullForm> {
+  final TextEditingController taskController = TextEditingController();
+  final key = GlobalKey<FormState>();
+
   @override
   Widget build(BuildContext context) {
     return const Placeholder();
