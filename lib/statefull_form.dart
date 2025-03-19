@@ -141,6 +141,32 @@ class _StatefullFormState extends State<StatefullForm> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+              Row(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Expanded( 
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text('Task Date:', style: TextStyle(fontSize: 18)),
+                        Text(
+                          pilihDateTime == null
+                              ? 'Select a date'
+                              : '${pilihDateTime!.day.toString().padLeft(2, '0')}-'
+                                '${pilihDateTime!.month.toString().padLeft(2, '0')}-'
+                                '${pilihDateTime!.year} '
+                                '${pilihDateTime!.hour.toString().padLeft(2, '0')}:'
+                                '${pilihDateTime!.minute.toString().padLeft(2, '0')}',
+                          style: TextStyle(
+                            fontSize: 18,
+                            color: Colors.black,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
             ],
           ),
         ),
