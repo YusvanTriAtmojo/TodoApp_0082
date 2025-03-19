@@ -87,6 +87,12 @@ class _StatefullFormState extends State<StatefullForm> {
                       decoration: TextDecoration.none,
                     ),
                   ),
+                  IconButton(
+                    icon: Icon(Icons.close, color: Colors.black, size: 24),
+                    onPressed: () {
+                      Navigator.of(context).pop();
+                    },
+                  ),
                 ],
               ),
             ),
