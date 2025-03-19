@@ -170,6 +170,11 @@ class _StatefullFormState extends State<StatefullForm> {
                       ],
                     ),
                   ),
+                  IconButton(
+                    onPressed: () {createDateTime(context);},
+                    icon: const Icon(Icons.calendar_today, color: Colors.blue),
+                    iconSize: 30,
+                  ),
                 ],
               ),
             ],
