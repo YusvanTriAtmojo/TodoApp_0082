@@ -192,6 +192,13 @@ class _StatefullFormState extends State<StatefullForm> {
                           return null;
                         },
                         autovalidateMode: AutovalidateMode.onUserInteraction,
+                        decoration: InputDecoration(
+                          label: Text('First Name'),
+                          hintText: 'Enter your first name',
+                          border: OutlineInputBorder(
+                            borderSide: BorderSide(color: Colors.deepPurple),
+                          ),
+                        ),
                       ),
                     ),
                   ],
