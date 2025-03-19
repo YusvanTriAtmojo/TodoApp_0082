@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
 
 class StatefullForm extends StatefulWidget {
   const StatefullForm({super.key});
@@ -56,6 +57,34 @@ class _StatefullFormState extends State<StatefullForm> {
     setState(() {
       daftarTask[index]['status'] = !daftarTask[index]['status'];
     });
+  }
+
+  void createDateTime(BuildContext context) {
+    showCupertinoModalPopup(
+      context: context,
+      builder: (_) => Container(
+        height: 350,
+        decoration: BoxDecoration(
+          color: Colors.white,
+          borderRadius: BorderRadius.only(
+            topLeft: Radius.circular(20),
+            topRight: Radius.circular(20),
+          ),
+        ),
+        child: Column(
+          children: [
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                ],
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
   }
 
   @override
