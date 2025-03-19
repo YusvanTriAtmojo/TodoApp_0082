@@ -162,6 +162,11 @@ class _StatefullFormState extends State<StatefullForm> {
                             color: Colors.black,
                           ),
                         ),
+                        if (dateTime) 
+                          Text(
+                            'Please select a date',
+                            style: TextStyle(fontSize: 16, color: Colors.red),
+                          ),
                       ],
                     ),
                   ),
