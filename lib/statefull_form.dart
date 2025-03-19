@@ -37,6 +37,19 @@ class _StatefullFormState extends State<StatefullForm> {
       taskController.clear();
       pilihDateTime = null;
     });
+
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(
+        content: Text('Task added successfully'),
+        backgroundColor: const Color.fromARGB(255, 67, 179, 125),
+        duration: Duration(seconds: 5),
+        behavior: SnackBarBehavior.floating,
+        margin: EdgeInsets.all(16),
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(5),
+        ),
+      ),
+    );
   }
 
   @override
