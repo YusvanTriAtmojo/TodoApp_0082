@@ -17,15 +17,6 @@ class _StatefullFormState extends State<StatefullForm> {
 
   void addData() {
     setState(() {
-      if (pilihDateTime == null) {
-        // Menampilkan alert
-        dateTime = true; 
-        return;
-      } else {
-        // Menghilangkan alert
-        dateTime = false; 
-      }
-
       daftarTask.add({
         'task': taskController.text,
         'status': false,
@@ -38,6 +29,7 @@ class _StatefullFormState extends State<StatefullForm> {
       taskController.clear();
       pilihDateTime = null;
     });
+    key.currentState!.reset();
 
     ScaffoldMessenger.of(context).showSnackBar(
       SnackBar(
