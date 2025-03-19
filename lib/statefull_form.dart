@@ -177,6 +177,19 @@ class _StatefullFormState extends State<StatefullForm> {
                   ),
                 ],
               ),
+              SizedBox(height: 20),
+              Form(
+                key: key,
+                child: Row(
+                  children: [
+                    Expanded(
+                      child: TextFormField(
+                        controller: taskController,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
             ],
           ),
         ),
