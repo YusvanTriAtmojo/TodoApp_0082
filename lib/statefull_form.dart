@@ -109,6 +109,19 @@ class _StatefullFormState extends State<StatefullForm> {
                 },
               ),
             ),
+            OutlinedButton(
+              style: OutlinedButton.styleFrom(
+                foregroundColor: Colors.white,
+                backgroundColor: Colors.blue,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(7),
+                ),
+              ),
+              child: Text('Select'),
+              onPressed: () {
+                Navigator.of(context).pop();
+              },
+            ),
           ],
         ),
       ),
