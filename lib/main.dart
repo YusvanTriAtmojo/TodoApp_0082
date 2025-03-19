@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:statefull/counter_page.dart';
 import 'package:statefull/profile_page.dart';
+import 'package:statefull/statefull_form.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
       
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: const ProfilePage(),
+      home: const StatefullForm(),
       debugShowCheckedModeBanner: false,
     );
   }
