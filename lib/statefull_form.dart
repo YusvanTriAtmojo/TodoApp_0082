@@ -52,6 +52,12 @@ class _StatefullFormState extends State<StatefullForm> {
     );
   }
 
+  void status(int index) {
+    setState(() {
+      daftarTask[index]['status'] = !daftarTask[index]['status'];
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return const Placeholder();
