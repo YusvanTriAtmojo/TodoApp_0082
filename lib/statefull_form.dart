@@ -201,6 +201,24 @@ class _StatefullFormState extends State<StatefullForm> {
                         ),
                       ),
                     ),
+                    SizedBox(width: 18),
+                    OutlinedButton(
+                      onPressed: () {
+                        setState(() {
+                          if (pilihDateTime == null) {
+                            dateTime = true; 
+                          }
+                        });
+                        if (key.currentState!.validate() && pilihDateTime != null) {
+                          addData();
+                        }
+                      },
+                      style: OutlinedButton.styleFrom(
+                        foregroundColor: Colors.white,
+                        backgroundColor: Colors.deepPurple,
+                      ),
+                      child: Text('Submit'),
+                    ),
                   ],
                 ),
               ),
