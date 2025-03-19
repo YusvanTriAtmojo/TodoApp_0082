@@ -78,6 +78,15 @@ class _StatefullFormState extends State<StatefullForm> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
+                  Text(
+                    'Set Task Date & Time',
+                    style: TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.black,
+                      decoration: TextDecoration.none,
+                    ),
+                  ),
                 ],
               ),
             ),
