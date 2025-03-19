@@ -185,6 +185,13 @@ class _StatefullFormState extends State<StatefullForm> {
                     Expanded(
                       child: TextFormField(
                         controller: taskController,
+                        validator: (value) {
+                          if (value == null || value.isEmpty) {
+                            return 'Please enter some text';
+                          }
+                          return null;
+                        },
+                        autovalidateMode: AutovalidateMode.onUserInteraction,
                       ),
                     ),
                   ],
