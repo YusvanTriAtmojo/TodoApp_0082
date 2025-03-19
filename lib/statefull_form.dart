@@ -10,6 +10,7 @@ class StatefullForm extends StatefulWidget {
 class _StatefullFormState extends State<StatefullForm> {
   final TextEditingController taskController = TextEditingController();
   final key = GlobalKey<FormState>();
+  List<Map<String, dynamic>> daftarTask = [];
 
   @override
   Widget build(BuildContext context) {
