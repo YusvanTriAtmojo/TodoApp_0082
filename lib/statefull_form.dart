@@ -96,6 +96,19 @@ class _StatefullFormState extends State<StatefullForm> {
                 ],
               ),
             ),
+            SizedBox(
+              height: 200,
+              child: CupertinoDatePicker(
+                mode: CupertinoDatePickerMode.dateAndTime,
+                initialDateTime: pilihDateTime ?? DateTime.now(),
+                onDateTimeChanged: (DateTime newDate) {
+                  setState(() {
+                    pilihDateTime = newDate;
+                    dateTime = false; 
+                  });
+                },
+              ),
+            ),
           ],
         ),
       ),
