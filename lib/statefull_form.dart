@@ -246,6 +246,13 @@ class _StatefullFormState extends State<StatefullForm> {
                                   style: TextStyle(
                                     fontSize: 16),
                                 ),
+                                Text(
+                                  daftarTask[index]['status'] ? "Done" : "Not Done",
+                                  style: TextStyle(
+                                    color: daftarTask[index]['status'] ? Colors.green : Colors.red,
+                                    fontSize: 18,
+                                  ),
+                                ),
                               ],
                             ),
                           ),
