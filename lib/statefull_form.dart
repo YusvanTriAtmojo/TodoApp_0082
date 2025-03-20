@@ -52,6 +52,8 @@ class _StatefullFormState extends State<StatefullForm> {
   }
 
   void createDateTime(BuildContext context) {
+    DateTime? tempDateTime = pilihDateTime ?? DateTime.now(); 
+
     showCupertinoModalPopup(
       context: context,
       builder: (_) => Container(
@@ -92,12 +94,9 @@ class _StatefullFormState extends State<StatefullForm> {
               height: 200,
               child: CupertinoDatePicker(
                 mode: CupertinoDatePickerMode.dateAndTime,
-                initialDateTime: pilihDateTime ?? DateTime.now(),
+                initialDateTime: tempDateTime,
                 onDateTimeChanged: (DateTime newDate) {
-                  setState(() {
-                    pilihDateTime = newDate;
-                    dateTime = false; 
-                  });
+                  tempDateTime = newDate; 
                 },
               ),
             ),
@@ -111,6 +110,10 @@ class _StatefullFormState extends State<StatefullForm> {
               ),
               child: Text('Select'),
               onPressed: () {
+                setState(() {
+                  pilihDateTime = tempDateTime; 
+                  dateTime = false; 
+                });
                 Navigator.of(context).pop();
               },
             ),
