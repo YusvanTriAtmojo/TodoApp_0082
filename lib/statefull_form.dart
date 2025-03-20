@@ -217,6 +217,21 @@ class _StatefullFormState extends State<StatefullForm> {
               SizedBox(height: 20),
               Text('List Tasks',
                   style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold)),
+                  Expanded(
+                  child: ListView.builder(
+                  itemCount: daftarTask.length,
+                  itemBuilder: (context, index) {
+                    return Container(
+                      margin: EdgeInsets.only(bottom: 10),
+                      padding: const EdgeInsets.all(8.0),
+                      decoration: BoxDecoration(
+                        color: Colors.indigo[100],
+                        borderRadius: BorderRadius.circular(10.0),
+                      ),
+                    );
+                  },
+                ),
+              )
             ],
           ),
         ),
