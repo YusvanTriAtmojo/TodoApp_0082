@@ -228,6 +228,23 @@ class _StatefullFormState extends State<StatefullForm> {
                         color: Colors.indigo[100],
                         borderRadius: BorderRadius.circular(10.0),
                       ),
+                       child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Expanded(
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  daftarTask[index]['task'],
+                                  style: TextStyle(
+                                      fontSize: 20, fontWeight: FontWeight.bold),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
                     );
                   },
                 ),
