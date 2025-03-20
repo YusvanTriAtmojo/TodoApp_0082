@@ -240,6 +240,12 @@ class _StatefullFormState extends State<StatefullForm> {
                                   style: TextStyle(
                                       fontSize: 20, fontWeight: FontWeight.bold),
                                 ),
+                                SizedBox(height: 4),
+                                Text(
+                                  'Deadline: ${daftarTask[index]['dateTime']}',
+                                  style: TextStyle(
+                                    fontSize: 16),
+                                ),
                               ],
                             ),
                           ),
