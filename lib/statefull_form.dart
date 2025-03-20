@@ -132,7 +132,7 @@ class _StatefullFormState extends State<StatefullForm> {
       ),
       body: SafeArea(
         child: Padding(
-          padding: const EdgeInsets.all(8.0),
+          padding: const EdgeInsets.all(16.0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -193,6 +193,7 @@ class _StatefullFormState extends State<StatefullForm> {
                           border: OutlineInputBorder(
                             borderSide: BorderSide(color: Colors.deepPurple),
                           ),
+                          errorStyle: TextStyle(fontSize: 15),
                         ),
                       ),
                     ),
@@ -219,7 +220,8 @@ class _StatefullFormState extends State<StatefullForm> {
               ),
               SizedBox(height: 20),
               Text('List Tasks',
-                  style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold)),
+                  style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold)),
+                  SizedBox(height: 10),
                   Expanded(
                   child: ListView.builder(
                   itemCount: daftarTask.length,
