@@ -29,7 +29,10 @@ class _StatefullFormState extends State<StatefullForm> {
       taskController.clear();
       pilihDateTime = null;
     });
-    key.currentState!.reset();
+    Future.delayed(Duration.zero, () {
+      key.currentState!.reset();
+    });
+
 
     ScaffoldMessenger.of(context).showSnackBar(
       SnackBar(
@@ -230,7 +233,7 @@ class _StatefullFormState extends State<StatefullForm> {
                       margin: EdgeInsets.only(bottom: 10),
                       padding: const EdgeInsets.all(8.0),
                       decoration: BoxDecoration(
-                        color: Colors.indigo[100],
+                        color: const Color.fromARGB(255, 225, 227, 236),
                         borderRadius: BorderRadius.circular(10.0),
                       ),
                        child: Row(
@@ -249,7 +252,7 @@ class _StatefullFormState extends State<StatefullForm> {
                                 Text(
                                   'Deadline: ${daftarTask[index]['dateTime']}',
                                   style: TextStyle(
-                                    fontSize: 16),
+                                    fontSize: 16, color: const Color.fromARGB(255, 128, 127, 127)),
                                 ),
                                 Text(
                                   daftarTask[index]['status'] ? "Done" : "Not Done",
