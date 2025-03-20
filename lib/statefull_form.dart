@@ -256,6 +256,15 @@ class _StatefullFormState extends State<StatefullForm> {
                               ],
                             ),
                           ),
+                          Transform.scale(
+                            scale: 1.2, 
+                            child: Checkbox(
+                              value: daftarTask[index]['status'],
+                              onChanged: (bool? value) {
+                                status(index);
+                              },
+                            ),
+                          ),
                         ],
                       ),
                     );
